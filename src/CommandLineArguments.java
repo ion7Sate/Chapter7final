@@ -1,37 +1,13 @@
-//import java.util.Scanner;
-//
-//public class CommandLineArguments {
-//    public static void main( String args[] )
-//
-//    {
-//        Scanner input = new Scanner(System.in);
-//       int inputNumber = 0;
-//        int array[] ;
-//        array = new int[ inputNumber ];
-//
-//        System.out.println( "Please enter a number for the array size: " );
-//
-//        int num = input.nextInt();
-//        if (inputNumber > 0){
-//            array[length] = array[num];
-//    }
-//
-//        else
-//
-//    {
-//
-//        array[length] = array[10];
-//
-//    }
-//
-//        System.out.printf( "%s%8s\n", "Index", "Value" ); // column headings
-//
-//
-//        for ( int counter = 0; counter < array.length; counter++ )
-//
-//            System.out.printf( "%5d%8d\n", counter, array[ counter ] );
-//
-//
-//
-//}
-//}
+public class CommandLineArguments {
+    public static void main(String[] args) {
+        int arrayLength = 10;
+        if (args.length !=0)
+            arrayLength = Integer.parseInt(args[0]);
+        int[] array = new int[arrayLength];
+
+        System.out.printf("%s%8s%n", "Index", "Value");
+
+        for (int counter = 0; counter < array.length; counter++)
+            System.out.printf("%5d%8d%n", counter, array[counter]);
+    }
+}
